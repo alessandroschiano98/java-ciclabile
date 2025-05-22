@@ -1,5 +1,6 @@
 package org.lessons.java;
 
+
 public class Ciclabile {
     private int[] interi; 
     private int indiceCorrente;
@@ -22,12 +23,12 @@ public class Ciclabile {
         return this.indiceCorrente;
     }
 
-    public int getElementoSuccessivo(){
+    public int getElementoSuccessivo() throws Exception {
         if (hasAncoraElementi()){
             this.indiceCorrente = this.indiceCorrente + 1;
             return this.interi[this.indiceCorrente];
         } else {
-            return -1; //! da ritornare con un'eccezione
+            throw new Exception("Indice troppo grande per l'array in uso"); //! da ritornare con un'eccezione
         }
     }
 
@@ -75,4 +76,3 @@ public class Ciclabile {
     }
 
 }
-
